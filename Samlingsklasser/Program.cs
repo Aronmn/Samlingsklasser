@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,7 +11,13 @@ namespace Samlingsklasser
     {
         static void Main(string[] args)
         {
-            Dictionary<int, int> resultat = new Dictionary<int, int>();
+            //Övning 1
+
+            Stopwatch stopWatch = new Stopwatch();
+            stopWatch.Start();
+            
+
+            SortedList<int, int> resultat = new SortedList<int, int>();
 
             Random random = new Random();
 
@@ -28,6 +35,13 @@ namespace Samlingsklasser
             {
                 Console.WriteLine("Nyckel: {0} Värde: {1}", kvp.Key, kvp.Value);
             }
+            stopWatch.Stop();
+            Console.WriteLine("ms " + stopWatch.Elapsed.TotalMilliseconds);
+
+            //Övning 2
+
+
+
 
         }
     }
